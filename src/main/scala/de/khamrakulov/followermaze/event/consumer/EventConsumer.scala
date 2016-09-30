@@ -8,5 +8,5 @@ import de.khamrakulov.followermaze.Event
 trait EventConsumer[T <: Event] {
   val consumerId: Int
 
-  def consume(event: T)
+  def consume(event: T): Boolean
 }
