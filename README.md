@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/htimur/followermaze.svg?branch=master)](https://travis-ci.org/htimur/followermaze.svg?branch=master)
+
 ## The Challenge
 The challenge proposed here is to build a system which acts as a socket
 server, reading events from an *event source* and forwarding them when
