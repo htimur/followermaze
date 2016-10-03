@@ -2,6 +2,7 @@ package de.khamrakulov.followermaze.event.transformer
 
 import java.util.concurrent.BlockingQueue
 
+import de.khamrakulov.followermaze.event._
 import de.khamrakulov.followermaze.{Event, TypedEvent, UntypedEvent}
 
 /**
@@ -13,5 +14,5 @@ trait EventTransformer[IN <: Event, OUT <: Event] {
 }
 
 object EventTransformer {
-  def toTypedEvent(in: BlockingQueue[UntypedEvent], out: BlockingQueue[TypedEvent]) = new ToTypedEventTransformer(in, out)
+  def toTypedEvent(in: BlockingQueue[UntypedEvent], out: BlockingQueue[TypedEvent], keepRunning: LazyBool = LazyTrue) = new ToTypedEventTransformer(in, out)(keepRunning)
 }

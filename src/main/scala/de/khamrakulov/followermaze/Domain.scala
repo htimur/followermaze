@@ -40,7 +40,7 @@ case class PrivateMsg(sequence: Int, from: Int, to: Int) extends TypedEvent {
   override val stringify = s"$sequence|$key|$from|$to"
 }
 
-case class StatusUpdated(sequence: Int, from: Int) extends TypedEvent {
+case class StatusUpdate(sequence: Int, from: Int) extends TypedEvent {
   override val key = "S"
 
   override val stringify = s"$sequence|$key|$from"
