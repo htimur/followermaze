@@ -115,4 +115,29 @@ following environment variables:
 
 ### Solution
 
-##### Design
+Solution implemented as a streaming pipeline of Event transformations. Where Data Source is represented by EventSource and Sink By EventConsumer.
+In the pipeline events from String representation mapped to UntypedEvent, then parsed to TypedEvent representation and finally routed by Router to the Sink(EventConsumer).   
+
+### Design
+
+![alt text](https://github.com/htimur/followermaze/raw/master/docs/design.png "Solution design")
+
+### Testing
+
+Run unit tests
+
+```bash
+$ sbt test
+```
+
+Start the server
+
+```bash
+$ sbt run
+```
+
+Run the client
+
+```bash
+./followermaze.sh
+```
