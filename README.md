@@ -114,3 +114,5 @@ following environment variables:
    The interval in milliseconds used to log the sent messages counter.
 
 ### Solution
+
+##### Design
