@@ -6,13 +6,14 @@ import de.khamrakulov.followermaze._
 import de.khamrakulov.followermaze.controller.{ClientController, FollowController}
 import de.khamrakulov.followermaze.nio.NioClientImpl
 import org.mockito.Mockito
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class RouterSpec extends FlatSpec with Matchers with MockitoSugar {
+class RouterSpec extends AnyFlatSpec with Matchers with MockitoSugar {
   "Router" should "correctly route events" in {
     val service = Executors.newSingleThreadExecutor()
     val in = new LinkedBlockingQueue[TypedEvent]()

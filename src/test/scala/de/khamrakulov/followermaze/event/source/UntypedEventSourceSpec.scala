@@ -7,14 +7,15 @@ import java.util.concurrent.{LinkedBlockingQueue, TimeUnit, Future => JFuture}
 import de.khamrakulov.followermaze.UntypedEvent
 import org.mockito.invocation.InvocationOnMock
 import org.mockito.stubbing.Answer
-import org.mockito.{Mockito, Matchers => M}
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.{FlatSpec, Matchers}
+import org.mockito.{Mockito, ArgumentMatchers => M}
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class UntypedEventSourceSpec extends FlatSpec with Matchers with MockitoSugar {
+class UntypedEventSourceSpec extends AnyFlatSpec with Matchers with MockitoSugar {
   def getSocket(output1: String, output2: String) = {
     val stringBytes1 = output1.getBytes("utf-8")
     val stringBytes2 = output2.getBytes("utf-8")

@@ -3,12 +3,13 @@ package de.khamrakulov.followermaze.event.transformer
 import java.util.concurrent.{Executors, LinkedBlockingQueue, TimeUnit}
 
 import de.khamrakulov.followermaze._
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class ToTypedEventTransformerSpec extends FlatSpec with Matchers {
+class ToTypedEventTransformerSpec extends AnyFlatSpec with Matchers {
   "ToTypedEventTransformer" should "correctly transform events" in {
     val in = new LinkedBlockingQueue[UntypedEvent]()
     in.add(UntypedEvent("1|F|2|3"))

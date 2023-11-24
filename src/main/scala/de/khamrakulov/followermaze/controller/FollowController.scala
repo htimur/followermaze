@@ -2,7 +2,7 @@ package de.khamrakulov.followermaze.controller
 
 import java.util.concurrent.{ConcurrentHashMap, ConcurrentSkipListSet}
 
-import scala.collection.convert.decorateAsScala._
+import scala.jdk.CollectionConverters._
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.

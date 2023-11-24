@@ -2,7 +2,7 @@ package de.khamrakulov.followermaze.controller
 
 import java.util.concurrent.ConcurrentHashMap
 
-import scala.collection.convert.decorateAsScala._
+import scala.jdk.CollectionConverters._
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
@@ -12,7 +12,7 @@ object ClientController {
 }
 
 class ClientController {
-  val clients = new ConcurrentHashMap[Int, Client]().asScala
+  val clients =  new ConcurrentHashMap[Int, Client]().asScala
 
   def get(id: Int) = clients.get(id)
 

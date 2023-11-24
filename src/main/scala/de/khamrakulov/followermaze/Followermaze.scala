@@ -27,5 +27,5 @@ object Followermaze extends App {
   clientListener.start()
 
   new Thread(EventTransformer.toTypedEvent(eventSourceQueue, transformedQueue), "Transformer thread").start()
-  new Thread(Router(transformedQueue, clientController, followerController), "Router thread")start()
+  new Thread(Router(transformedQueue, clientController, followerController), "Router thread").start()
 }

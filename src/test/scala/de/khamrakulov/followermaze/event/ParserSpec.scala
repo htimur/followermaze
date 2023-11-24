@@ -1,12 +1,13 @@
 package de.khamrakulov.followermaze.event
 
 import de.khamrakulov.followermaze._
-import org.scalatest._
-
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class ParserSpec extends FlatSpec with Matchers {
+class ParserSpec extends AnyFlatSpec with Matchers {
   val followString = "666|F|60|50"
   val unfollowString = "666|U|60|50"
   val broadcastString = "666|B"

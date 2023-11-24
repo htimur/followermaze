@@ -2,14 +2,15 @@ package de.khamrakulov.followermaze.controller
 
 import de.khamrakulov.followermaze.{Broadcast, TypedEvent}
 import org.mockito.Mockito
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class TypedEventSeqControllerSpec extends FlatSpec with Matchers with MockitoSugar {
+class TypedEventSeqControllerSpec extends AnyFlatSpec with Matchers with MockitoSugar {
   "TypedEventSeqController" should "provide events in correct order" in {
     type Handler = TypedEvent => Unit
     val handler = mock[Handler]

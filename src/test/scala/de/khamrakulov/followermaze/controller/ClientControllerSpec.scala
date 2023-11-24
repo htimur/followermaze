@@ -1,13 +1,14 @@
 package de.khamrakulov.followermaze.controller
 
 import de.khamrakulov.followermaze.nio.NioClientImpl
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class ClientControllerSpec extends FlatSpec with Matchers with MockitoSugar {
+class ClientControllerSpec extends AnyFlatSpec with Matchers with MockitoSugar {
   "ClientController" should "add and get clients" in {
     val controller = ClientController()
     val client = mock[NioClientImpl]

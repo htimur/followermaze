@@ -1,11 +1,12 @@
 package de.khamrakulov.followermaze.controller
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /**
   * @author Timur Khamrakulov <timur.khamrakulov@gmail.com>.
   */
-class FollowControllerSpec extends FlatSpec with Matchers {
+class FollowControllerSpec extends AnyFlatSpec with Matchers {
   "FollowController" should "add, get and remove follow relations" in {
     val controller = FollowController()
     controller.add(1, 2)
